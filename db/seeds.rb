@@ -30,7 +30,7 @@ Experience.create( [
   },
   { title: "Software Developer Trainee",
     date_started: Date.new(2014,6,1),
-    date_ended: Date.new(2016,12,23),
+    date_ended: Date.new(2015,12,23),
     company: "BEPiD - Brazilian Education Program iOS Development",
     company_url: "http://bepid.ifce.edu.br/",
     description:  "A program aimed towards iOS development,using both Objective-C and Swift as development"+
