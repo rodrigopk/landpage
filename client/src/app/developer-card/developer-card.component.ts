@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Developer } from '../developer';
-import { DeveloperService } from '../developer.service'
+import { Developer } from '../developer/developer';
+import { DeveloperService } from '../developer/developer.service'
 
 @Component({
   selector: 'developer-card',

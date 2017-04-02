@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let xp of experiences">
+    <p>{{xp.title}} - <a href="{{xp.company_url}}">{{xp.company}}</a></p>
+    <p>
+      {{xp.date_started | date:'MMM y' }} <span *ngIf="!xp.current">- {{xp.date_ended  | date:'MMM y' }}</span> ({{xp.periodString}} )
+    </p>
+    <p>{{xp.description}}</p>
+  </li>
+</ul>
