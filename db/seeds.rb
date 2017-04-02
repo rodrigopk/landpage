@@ -89,3 +89,34 @@ Skill.create([
                   "projects with different scopes and teams both large and small."
   }
 ])
+
+
+Interest.create([
+  {
+    title: "Programming"
+  },
+  {
+    title: "Literature"
+  },
+  {
+    title: "Video Games"
+  },
+  {
+    title: "Cryptocurrencies"
+  },
+  {
+    title: "Self Development"
+  },
+  {
+    title: "Martial Arts"
+  },
+  {
+    title: "Traveling"
+  },
+  {
+    title: "Craft Beer"
+  },
+  {
+    title: "Cooking"
+  }
+]);
