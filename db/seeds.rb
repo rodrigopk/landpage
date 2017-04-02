@@ -49,4 +49,43 @@ Experience.create( [
   }
 ])
 
-
+Skill.create([
+  { title: "Ruby on Rails",
+    experience: 24,
+    description: "I have worked with RoR since version 4.2, mostly using it to create RESTful APIs.\n"+
+                  "Fun fact: this site uses a rails 5.1 API to feed it's data."
+  },
+  { title: "angularJS",
+    experience: 8,
+    description: "I have used angularJS  (both v1 and v2) to build client side applications,"+
+                  " both professionally and on personal projects.\nFun fact: this app uses angularJS "+
+                  "v2 on the frontend."
+  },
+  { title: "Swift",
+    experience: 18,
+    description: "I have used Swift to program for iOS devices since it's debut on 2014."+
+                "I have developed 4 apps using it, during my time on BEPiD and after"+
+                "it's conclusion."
+  },
+  { title: "C++",
+    experience: 12,
+    description: "I have used C++ to develop desktop applications both professionally and"+
+                  " academically, but haven't done it in a while. Not a stranger to scrubbing bits, though."
+  },
+  { title: "Git",
+    experience: 36,
+    description: "I use git as my version control software for most of my projects, and It's "+
+                  " also the one I have used the most professionally. I prefer using it via command"+
+                  "line, for practicality."
+  },
+  { title: "Subversion",
+    experience: 12,
+    description: "I have used svn during my time working on LSBD and on some academic projects, but "+
+                  " I prefer git over it for its decentralized approach."
+  },
+  { title: "Scrum",
+    experience: 36,
+    description: "I have used used scrum for most of the projects I worked with other developers, in"+
+                  "projects with different scopes and teams both large and small."
+  }
+])

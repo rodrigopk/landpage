@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :skills
   scope '/api' do
+    resources :skills
     resources :experiences
     resources :developers, only: [:show]
   end
