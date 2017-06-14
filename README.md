@@ -1,24 +1,24 @@
-# README
+# Landpage
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a small project to serve as a online CV/portfolio for myself. It uses AngularJS to render the views and Ruby on Rails to provide the data through an API.
 
-Things you may want to cover:
+### Installing
 
-* Ruby version
+On the project root folder:
 
-* System dependencies
+    $ bundle install
+    $ rails db:create
+    $ rails db:migrate
+    $ rails db:seed
+    $ cd client
+    $ npm install
 
-* Configuration
+### Running
 
-* Database creation
+To run the project locally, you need to start both the rails and angular servers.
 
-* Database initialization
+### Deploying 
 
-* How to run the test suite
+The project is aimed to be deployed as a single package. TO-DO: Add heroku deployment instructions.
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
