@@ -2,6 +2,9 @@ require 'rails_helper'
 
 RSpec.describe InterestsController, type: :controller do
 
+  before do
+    @dev = FactoryGirl.create(:developer)
+  end
 
   let(:valid_attributes) {
     FactoryGirl.build(:interest).attributes
@@ -34,12 +37,12 @@ RSpec.describe InterestsController, type: :controller do
     context "with valid params" do
       it "creates a new Interest" do
         expect {
-          post :create, params: {interest: valid_attributes}, session: valid_session
+          post :create, params: {interest: valid_attributes, dev_id: @dev.id}, session: valid_session
         }.to change(Interest, :count).by(1)
       end
 
       it "assigns a newly created interest as @interest" do
-        post :create, params: {interest: valid_attributes}, session: valid_session
+        post :create, params: {interest: valid_attributes, dev_id: @dev.id}, session: valid_session
         expect(assigns(:interest)).to be_a(Interest)
         expect(assigns(:interest)).to be_persisted
       end
@@ -47,7 +50,7 @@ RSpec.describe InterestsController, type: :controller do
 
     context "with invalid params" do
       it "assigns a newly created but unsaved interest as @interest" do
-        post :create, params: {interest: invalid_attributes}, session: valid_session
+        post :create, params: {interest: invalid_attributes, dev_id: @dev.id}, session: valid_session
         expect(assigns(:interest)).to be_a_new(Interest)
       end
     end

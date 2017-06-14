@@ -7,5 +7,6 @@ FactoryGirl.define do
     description "MyString"
     company "MyString"
     company_url "MyString"
+    developer
   end
 end

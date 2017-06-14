@@ -1,5 +1,6 @@
 class InterestsController < ApplicationController
   before_action :set_interest, only: [:show, :update, :destroy]
+  before_action :find_developer, only: [:create]
 
   # GET /interests
   def index
@@ -15,9 +16,9 @@ class InterestsController < ApplicationController
 
   # POST /interests
   def create
-    @interest = Interest.new(interest_params)
+    @interest = @dev.interests.create(interest_params)
 
-    if @interest.save
+    if @interest.persisted?
       render json: @interest, status: :created, location: @interest
     else
       render json: @interest.errors, status: :unprocessable_entity

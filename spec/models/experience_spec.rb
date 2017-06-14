@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Experience, type: :model do
   before do
-    @xp = FactoryGirl.create(:experience)
+    dev = FactoryGirl.create(:developer)
+    @xp = FactoryGirl.create(:experience, developer: dev)
   end
 
   describe 'title' do

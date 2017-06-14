@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Skill, type: :model do
   before do
-    @skill = FactoryGirl.create(:skill)
+    dev = FactoryGirl.create(:developer)
+    @skill = FactoryGirl.create(:skill, developer: dev)
   end
 
   describe 'title' do

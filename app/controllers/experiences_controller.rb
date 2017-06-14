@@ -1,5 +1,6 @@
 class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show, :update, :destroy]
+  before_action :find_developer, only: [:create]
 
   # GET /experiences
   def index
@@ -15,9 +16,9 @@ class ExperiencesController < ApplicationController
 
   # POST /experiences
   def create
-    @experience = Experience.new(experience_params)
+    @experience = @dev.experiences.create(experience_params)
 
-    if @experience.save
+    if @experience.persisted?
       render json: @experience, status: :created, location: @experience
     else
       render json: @experience.errors, status: :unprocessable_entity

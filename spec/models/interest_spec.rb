@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Interest, type: :model do
   before do
-    @interest = FactoryGirl.create(:interest)
+  	dev = FactoryGirl.create(:developer)
+    @interest = FactoryGirl.create(:interest, developer: dev)
   end
 
   describe 'title' do

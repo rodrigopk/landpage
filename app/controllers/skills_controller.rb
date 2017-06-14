@@ -1,5 +1,6 @@
 class SkillsController < ApplicationController
   before_action :set_skill, only: [:show, :update, :destroy]
+  before_action :find_developer, only: [:create]
 
   # GET /skills
   def index
@@ -15,9 +16,9 @@ class SkillsController < ApplicationController
 
   # POST /skills
   def create
-    @skill = Skill.new(skill_params)
+    @skill = @dev.skills.create(skill_params)
 
-    if @skill.save
+    if @skill.persisted?
       render json: @skill, status: :created, location: @skill
     else
       render json: @skill.errors, status: :unprocessable_entity

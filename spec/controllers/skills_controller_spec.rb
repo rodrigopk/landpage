@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe SkillsController, type: :controller do
 
+  before do
+    @dev = FactoryGirl.create(:developer)
+  end
+
   let(:valid_attributes) {
     FactoryGirl.build(:skill).attributes
   }
@@ -32,12 +36,12 @@ RSpec.describe SkillsController, type: :controller do
     context "with valid params" do
       it "creates a new Skill" do
         expect {
-          post :create, params: {skill: valid_attributes}, session: valid_session
+          post :create, params: {skill: valid_attributes, dev_id: @dev.id }, session: valid_session
         }.to change(Skill, :count).by(1)
       end
 
       it "assigns a newly created skill as @skill" do
-        post :create, params: {skill: valid_attributes}, session: valid_session
+        post :create, params: {skill: valid_attributes, dev_id: @dev.id }, session: valid_session
         expect(assigns(:skill)).to be_a(Skill)
         expect(assigns(:skill)).to be_persisted
       end
@@ -47,7 +51,7 @@ RSpec.describe SkillsController, type: :controller do
 
     context "with invalid params" do
       it "assigns a newly created but unsaved skill as @skill" do
-        post :create, params: {skill: invalid_attributes}, session: valid_session
+        post :create, params: {skill: invalid_attributes, dev_id: @dev.id }, session: valid_session
         expect(assigns(:skill)).to be_a_new(Skill)
       end
 

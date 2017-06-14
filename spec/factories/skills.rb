@@ -4,5 +4,6 @@ FactoryGirl.define do
     experience 1
     image ""
     description "MyString"
+    developer
   end
 end

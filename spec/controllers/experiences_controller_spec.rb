@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe ExperiencesController, type: :controller do
 
+  before do
+    @dev = FactoryGirl.create(:developer)
+  end
+
   let(:valid_attributes) {
     FactoryGirl.build(:experience).attributes
   }
@@ -32,12 +36,12 @@ RSpec.describe ExperiencesController, type: :controller do
     context "with valid params" do
       it "creates a new Experience" do
         expect {
-          post :create, params: {experience: valid_attributes}, session: valid_session
+          post :create, params: {experience: valid_attributes, dev_id: @dev.id }, session: valid_session
         }.to change(Experience, :count).by(1)
       end
 
       it "assigns a newly created experience as @experience" do
-        post :create, params: {experience: valid_attributes}, session: valid_session
+        post :create, params: {experience: valid_attributes, dev_id: @dev.id}, session: valid_session
         expect(assigns(:experience)).to be_a(Experience)
         expect(assigns(:experience)).to be_persisted
       end
@@ -45,7 +49,7 @@ RSpec.describe ExperiencesController, type: :controller do
 
     context "with invalid params" do
       it "assigns a newly created but unsaved experience as @experience" do
-        post :create, params: {experience: invalid_attributes}, session: valid_session
+        post :create, params: {experience: invalid_attributes, dev_id: @dev.id}, session: valid_session
         expect(assigns(:experience)).to be_a_new(Experience)
       end
 
