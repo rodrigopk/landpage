@@ -1,5 +1,7 @@
 class Experience < ApplicationRecord
 
+	belongs_to :developer
+
   validates :title, presence: true
   validates :date_started, presence: true
   validates :company, presence: true
