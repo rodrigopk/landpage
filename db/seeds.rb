@@ -9,7 +9,7 @@ Developer.create( name: "Rodrigo Vasconcelos de Barros",
                         " desktop and embedded applications.\nMost recently I have been working with Ruby on Rails"+
                         " development, focusing on building RESTful API’s and designing ")
 
-Experience.create( [
+Developer.first.experiences.create( [
   { title: "Fullstack Developer",
     date_started: Date.new(2017,1,15),
     current: true,
@@ -49,7 +49,7 @@ Experience.create( [
   }
 ])
 
-Skill.create([
+Developer.first.skills.create([
   { title: "Ruby on Rails",
     experience: 24,
     description: "I have worked with RoR since version 4.2, mostly using it to create RESTful APIs.\n"+
@@ -91,7 +91,7 @@ Skill.create([
 ])
 
 
-Interest.create([
+Developer.first.interests.create([
   {
     title: "Programming"
   },
