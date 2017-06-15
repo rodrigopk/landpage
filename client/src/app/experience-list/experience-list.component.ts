@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Experience } from '../experience/experience';
 import { Developer } from '../developer/developer';
-import { DeveloperService } from '../developer/developer.service'
+import { DeveloperService } from '../developer/developer.service';
 
 @Component({
   selector: 'experience-list',

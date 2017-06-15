@@ -14,4 +14,15 @@ export class Skill {
                       obj.description
                     );
   }
+
+  public static arrayFromJson(json){
+     var intArray: Skill[] = [];
+
+    json.forEach(function(obj) {
+          intArray.push( 
+            Skill.fromJSON(obj)
+          );
+    });
+    return intArray;
+  }
 }

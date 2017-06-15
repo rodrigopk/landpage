@@ -6,6 +6,8 @@ import 'rxjs/add/operator/publishReplay';
 
 import { Developer } from '../developer/developer';
 import { Experience } from '../experience/experience';
+import { Skill } from '../skill/skill';
+import { Interest } from '../interest/interest';
 
 
 @Injectable()
@@ -27,8 +29,8 @@ export class DeveloperService {
                                                 res.json().location,
                                                 res.json().pitch,
                                                 Experience.arrayFromJson(res.json().experiences),
-                                                res.json().skills,
-                                                res.json().interests
+                                                Skill.arrayFromJson(res.json().skills),
+                                                Interest.arrayFromJson(res.json().skills)
                                             )                                           
                                     )
                                     .publishReplay(1)

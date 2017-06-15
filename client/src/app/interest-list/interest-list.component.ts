@@ -1,29 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Interest } from '../interest/interest'
-import { InterestService } from '../interest/interest.service'
+import { Developer } from '../developer/developer';
+import { DeveloperService } from '../developer/developer.service';
 
 @Component({
   selector: 'interest-list',
   templateUrl: './interest-list.component.html',
   styleUrls: ['./interest-list.component.css'],
-  providers: [ InterestService ]
+  providers: [ DeveloperService ]
 })
 export class InterestListComponent implements OnInit {
 
   interests : Interest[] = [];
-  constructor(private interestService: InterestService) { }
+  constructor(private _devService: DeveloperService) { }
 
   ngOnInit() {
-    this.interestService.listInterest()
-    .subscribe( response => {
-      var intArray = [];
-      response.json().forEach(function(obj){
-        intArray.push( 
-          Interest.fromJSON(obj)
-        );
-      });
-      this.interests = intArray;
+    this._devService.fetch()
+    .subscribe( response => {      
+      this.interests = response.interests;
     });
   }
 

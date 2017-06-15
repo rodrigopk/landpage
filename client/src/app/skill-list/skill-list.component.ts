@@ -1,30 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SkillService } from '../skill/skill.service'
 import { Skill } from '../skill/skill'
-
+import { Developer } from '../developer/developer';
+import { DeveloperService } from '../developer/developer.service';
 
 @Component({
   selector: 'skill-list',
   templateUrl: './skill-list.component.html',
   styleUrls: ['./skill-list.component.css'],
-  providers: [ SkillService ]
+  providers: [ DeveloperService ]
 })
 export class SkillListComponent implements OnInit {
   skills :Skill[] = [];
 
-  constructor(private skillService: SkillService) { }
+  constructor(private _devService: DeveloperService) { }
 
   ngOnInit() {
-    this.skillService.listSkills()
+    this._devService.fetch()
     .subscribe( response => {
-      var skillArray = [];
-      response.json().forEach(function(obj){
-        skillArray.push( 
-          Skill.fromJSON(obj)
-        );
-      });
-      this.skills = skillArray;
+      this.skills = response.skills;
     });
   }
 
