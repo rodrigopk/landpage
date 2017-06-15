@@ -3,6 +3,10 @@
   background-color: #FFFFF9 !important;
 }
 
+h1 {
+  text-align: center;
+}
+
 .jumbotron {
   text-align: center;
   background-color: white !important; 
@@ -11,4 +15,35 @@
 .picture {
   width: 25%;
   border-radius: 50%;
+}
+
+hr {
+  clear: left;
+}
+
+.row-fluid {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+}
+
+.row-fluid [class*="span"]:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.row-fluid .span4 {
+    width: 30%;
+}
+
+.row-fluid [class*="span"] {
+    display: block;
+    float: left;
+    min-height: 30px;
+    margin-left: 2.5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
