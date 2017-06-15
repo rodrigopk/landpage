@@ -27,4 +27,27 @@ export class Experience {
       }
 
   }
+
+
+  public static arrayFromJson(json){
+     var xpArray: Experience[] = [];
+
+    json.forEach(function(xp) {
+          xpArray.push(
+            new Experience(
+              xp.id,
+              xp.title,
+              xp.date_started,
+              xp.period,
+              xp.current,
+              xp.description,
+              xp.company,
+              xp.company_url,
+              xp.date_ended
+            )
+          );
+        });
+    return xpArray;
+  }
+
 }

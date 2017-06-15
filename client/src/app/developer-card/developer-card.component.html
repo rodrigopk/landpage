@@ -1,12 +1,12 @@
-<div class="card" *ngIf="developer">
-  <p>{{ developer.picture }}</p>
-  <h1>{{ developer.name }}</h1>
-  <h2>{{ developer.title }}</h2>
+<div class="card" *ngIf="_developer">
+  <p>{{ _developer.picture }}</p>
+  <h1>{{ _developer.name }}</h1>
+  <h2>{{ _developer.title }}</h2>
   <div class="info">
-    <p>{{ developer.age }}</p>
-    <p>{{ developer.location }}</p>
+    <p>{{ _developer.age }}</p>
+    <p>{{ _developer.location }}</p>
   </div>
   <div class="pitch">
-    <p>{{ developer.pitch }}</p>
+    <p>{{ _developer.pitch }}</p>
   </div>  
 </div>

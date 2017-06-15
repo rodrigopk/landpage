@@ -1,42 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Experience } from '../experience/experience'
-import { ExperienceService } from '../experience/experience.service'
+import { Experience } from '../experience/experience';
+import { Developer } from '../developer/developer';
+import { DeveloperService } from '../developer/developer.service'
 
 @Component({
   selector: 'experience-list',
   templateUrl: './experience-list.component.html',
   styleUrls: ['./experience-list.component.css'],
-  providers: [ExperienceService]
+  providers: [DeveloperService]
 })
 export class ExperienceListComponent implements OnInit {
 
   experiences : Experience[] = [];
 
-  constructor( private xpService: ExperienceService) { }
+  constructor( private devService: DeveloperService) { }
 
   ngOnInit() {
-    this.xpService.listExperiences()
+    this.devService.fetch()
     .subscribe(
       response => {
-        var responseArray = response.json();
-        var xpArray = [];
-        responseArray.forEach(function(xp) {
-          xpArray.push(
-            new Experience(
-              xp.id,
-              xp.title,
-              xp.date_started,
-              xp.period,
-              xp.current,
-              xp.description,
-              xp.company,
-              xp.company_url,
-              xp.date_ended
-            )
-          );
-        });
-        this.experiences = xpArray;
+        this.experiences = response.experiences;
       }
     );
   }

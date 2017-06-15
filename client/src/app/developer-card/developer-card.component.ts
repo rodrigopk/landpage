@@ -10,22 +10,14 @@ import { DeveloperService } from '../developer/developer.service'
   providers: [DeveloperService]
 })
 export class DeveloperCardComponent implements OnInit {
-  developer =  Developer.builder();
+  _developer =  Developer.builder();
 
   constructor( private devService :DeveloperService  ) { }
 
   ngOnInit() {
     this.devService.fetch()
       .subscribe(response => {
-        var json = response.json();
-        this.developer = new Developer(
-                            json.name,
-                            json.title,
-                            json.picture,
-                            json.age,
-                            json.location,
-                            json.pitch
-                          );
+        this._developer = response;
     });
   }
 
