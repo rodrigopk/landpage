@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+.container {
+  color: #222222 !important;
+  background-color: #FFFFF9 !important;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: white !important; 
+}
+
+.picture {
+  width: 25%;
+  border-radius: 50%;
+}
