@@ -57,7 +57,7 @@ Developer.first.skills.create([
     description: "I have worked with RoR since version 4.2, mostly using it to create RESTful APIs.\n"+
                   "Fun fact: this site uses a rails 5.1 API to feed it's data."
   },
-  { title: "angularJS",
+  { title: "AngularJS",
     experience: 8,
     image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497703502/2/original/angularjs.png"),
     description: "I have used angularJS  (both v1 and v2) to build client side applications,"+

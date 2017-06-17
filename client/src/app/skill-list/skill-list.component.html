@@ -1,8 +1,12 @@
-<!-- http://getbootstrap.com/2.3.2/components.html#thumbnails -->
 <h1>Skills</h1>
-<ul>
-  <li *ngFor="let skill of skills">
-    <p>{{skill.title}}</p>
-    <p>{{skill.description}}</p>
-  </li>
-</ul>
+<div class="row-fluid" id="skills-grid">
+  <ul class="thumbnails">
+    <li class="span4" *ngFor="let skill of skills">
+      <div class="thumbnail skill-element">
+        <img class="skill-icon" [src]="skill.image"/> 
+        <h3>{{skill.title}}</h3>
+        <p>{{skill.description}}</p>
+      </div>
+    </li>
+  </ul>
+</div>

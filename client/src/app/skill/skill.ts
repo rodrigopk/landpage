@@ -3,6 +3,7 @@ export class Skill {
   constructor(
     public id: number,
     public title: string,
+    public image: string,
     public experience: number,
     public description: string
   ){}
@@ -10,6 +11,7 @@ export class Skill {
   static fromJSON( obj: any){
     return new Skill( obj.id,
                       obj.title,
+                      obj.image,
                       obj.experience,
                       obj.description
                     );
