@@ -19,14 +19,13 @@ h1 {
 
 hr {
   clear: left;
+  background-color: #EEB631;
 }
 
 .row-fluid {
     width: 100%;
     margin-top: 50px;
 }
-
-
 
 .row-fluid .span4 {
     width: 27%;
@@ -41,15 +40,6 @@ hr {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-.skill-icon {
-    width: 100px;
-    height: 100px;
-}
-
-#skills-grid {
-  text-align: center;
 }
 
 @media (min-width: 1200px)

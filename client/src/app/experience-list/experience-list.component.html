@@ -1,12 +1,20 @@
 <h1>Experiences</h1>
-<div class="row-fluid">
-  <div class="span4" *ngFor="let xp of experiences">
-    <h4>{{xp.title}}</h4>
-    <h6>{{xp.company}}</h6>
-    <p>
-      {{xp.date_started | date:'MMM y' }} <span *ngIf="!xp.current">- {{xp.date_ended  | date:'MMM y' }}</span> ({{xp.periodString}} )
-    </p>
-    <p>{{xp.description}}</p>
-    <p><a href="{{xp.company_url}}">visit website</a></p>
-  </div>
+<div class="xp-list">
+  <ul>
+    <li *ngFor="let xp of experiences">
+      <div class="xp-item">
+        <div class="xp-title">
+          <h4>{{xp.title}}</h4>
+          <p>
+            {{xp.date_started | date:'MMM y' }} <span *ngIf="!xp.current">- {{xp.date_ended  | date:'MMM y' }}</span> ({{xp.periodString}} )
+          </p>
+        </div>
+        <div class="xp-description">
+          <p><b>{{xp.company}}</b></p>
+          <p>{{xp.description}}</p>
+          <p><a href="{{xp.company_url}}">company website</a></p>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
