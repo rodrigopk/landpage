@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170614193509) do
+ActiveRecord::Schema.define(version: 20170617193928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,20 @@ ActiveRecord::Schema.define(version: 20170614193509) do
     t.string   "pitch"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "educations", force: :cascade do |t|
+    t.string   "institution"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.boolean  "graduated"
+    t.string   "title"
+    t.string   "field"
+    t.string   "institution_url"
+    t.integer  "developer_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["developer_id"], name: "index_educations_on_developer_id", using: :btree
   end
 
   create_table "experiences", force: :cascade do |t|
@@ -69,6 +83,7 @@ ActiveRecord::Schema.define(version: 20170614193509) do
     t.index ["developer_id"], name: "index_skills_on_developer_id", using: :btree
   end
 
+  add_foreign_key "educations", "developers"
   add_foreign_key "experiences", "developers"
   add_foreign_key "interests", "developers"
   add_foreign_key "skills", "developers"

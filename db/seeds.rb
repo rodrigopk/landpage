@@ -131,3 +131,15 @@ Developer.first.interests.create([
     image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497722483/seed_data/cooking.png")
   }
 ]);
+
+Developer.first.educations.create([
+  {
+    institution: "Institution Federal de Educação, Ciência e Tecnologia do Ceará - IFCE",
+    institution_url:"http://ifce.edu.br/",
+    start_date: Date.new(2012,1,10),
+    end_date: Date.new(2016,12,20),
+    title: "Engineer’s Degree",
+    field: "Computer Engineering",
+    graduated: true
+  }
+]);
