@@ -4,7 +4,11 @@ class Developer < ApplicationRecord
   has_many :skills
   has_many :interests
 
-  has_attached_file :picture, styles: { medium: "300x300>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :picture, 
+                    :storage => :cloudinary,
+                    :path => ':id/:style/:filename',
+                    styles: { medium: "300x300>" }, 
+                    default_url: "/images/:style/missing.png"
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
 
   validates :name, presence: true

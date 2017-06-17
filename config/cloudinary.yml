@@ -1,0 +1,21 @@
+---
+development:
+  cloud_name: rodrigopk
+  api_key: '977177773346571'
+  api_secret: J-4FsspCj0PUgY9wNzix8J74lIg
+  enhance_image_tag: true
+  static_image_support: false
+
+production:
+  cloud_name: rodrigopk
+  api_key: '977177773346571'
+  api_secret: J-4FsspCj0PUgY9wNzix8J74lIg
+  enhance_image_tag: true
+  static_image_support: true
+  
+test:
+  cloud_name: rodrigopk
+  api_key: '977177773346571'
+  api_secret: J-4FsspCj0PUgY9wNzix8J74lIg
+  enhance_image_tag: true
+  static_image_support: false
