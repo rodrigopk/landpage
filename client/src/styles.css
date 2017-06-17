@@ -7,16 +7,6 @@ h1 {
   text-align: center;
 }
 
-.jumbotron {
-  text-align: center;
-  background-color: white !important; 
-}
-
-.picture {
-  width: 25%;
-  border-radius: 50%;
-}
-
 hr {
   clear: left;
   background-color: #EEB631;

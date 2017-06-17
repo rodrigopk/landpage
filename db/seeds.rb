@@ -95,30 +95,39 @@ Developer.first.skills.create([
 
 Developer.first.interests.create([
   {
-    title: "Programming"
+    title: "Programming",
+    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497722483/seed_data/coding.png")
   },
   {
-    title: "Literature"
+    title: "Literature",
+    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497723639/seed_data/literature.png")
   },
   {
-    title: "Video Games"
+    title: "Video Games",
+    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497722483/seed_data/video-games.png")
   },
   {
-    title: "Cryptocurrencies"
+    title: "Cryptocurrencies",
+    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497722483/seed_data/bitcoin.png")
   },
   {
-    title: "Self Development"
+    title: "Self Development",
+    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497723783/seed_data/self-improvement.png")
   },
   {
-    title: "Martial Arts"
+    title: "Martial Arts",
+    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497722483/seed_data/martial-arts.png")
   },
   {
-    title: "Traveling"
+    title: "Traveling",
+    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497722484/seed_data/travel.png")
   },
   {
-    title: "Craft Beer"
+    title: "Craft Beer",
+    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497722483/seed_data/beer.png")
   },
   {
-    title: "Cooking"
+    title: "Cooking",
+    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497722483/seed_data/cooking.png")
   }
 ]);

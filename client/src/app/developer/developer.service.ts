@@ -30,7 +30,7 @@ export class DeveloperService {
                                                 res.json().pitch,
                                                 Experience.arrayFromJson(res.json().experiences),
                                                 Skill.arrayFromJson(res.json().skills),
-                                                Interest.arrayFromJson(res.json().skills)
+                                                Interest.arrayFromJson(res.json().interests)
                                             )                                           
                                     )
                                     .publishReplay(1)

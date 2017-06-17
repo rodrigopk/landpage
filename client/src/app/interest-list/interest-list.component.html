@@ -1,6 +1,12 @@
 <h1>Interests</h1>
-<ul>
-  <li *ngFor="let interest of interests">
-    {{ interest.title }}
-  </li>
-</ul>
+<div class="row" class="interest-list">
+  <ul>
+    <li *ngFor="let interest of interests">
+      <div class="interest-item">
+        <img [src]="interest.image"/>  
+        <p>{{ interest.title }}</p>      
+      </div>
+    </li>
+  </ul>
+</div>
+

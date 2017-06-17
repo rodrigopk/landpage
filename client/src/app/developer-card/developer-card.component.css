@@ -1,0 +1,9 @@
+.jumbotron {
+  text-align: center;
+  background-color: white !important; 
+}
+
+.picture {
+  width: 25%;
+  border-radius: 50%;
+}
