@@ -16,9 +16,10 @@ class ContactsController < ApplicationController
 
   # POST /contacts
   def create
-    @contact = @dev.contacts.create(contact_params)
+    @contact = Contact.new(contact_params)    
 
-    if @contact.persisted?
+    if @contact.save
+      @dev.contact = @contact
       render json: @contact, status: :created, location: @contact
     else
       render json: @contact.errors, status: :unprocessable_entity

@@ -4,7 +4,7 @@ class Developer < ApplicationRecord
   has_many :skills
   has_many :interests
   has_many :educations
-  has_many :contacts
+  has_one :contact
 
   has_attached_file :picture, 
                     :storage => :cloudinary,
