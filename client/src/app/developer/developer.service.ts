@@ -8,6 +8,8 @@ import { Developer } from '../developer/developer';
 import { Experience } from '../experience/experience';
 import { Skill } from '../skill/skill';
 import { Interest } from '../interest/interest';
+import { Education } from '../education/education';
+
 
 
 @Injectable()
@@ -30,7 +32,8 @@ export class DeveloperService {
                                                 res.json().pitch,
                                                 Experience.arrayFromJson(res.json().experiences),
                                                 Skill.arrayFromJson(res.json().skills),
-                                                Interest.arrayFromJson(res.json().interests)
+                                                Interest.arrayFromJson(res.json().interests),
+                                                Education.arrayFromJson(res.json().educations)
                                             )                                           
                                     )
                                     .publishReplay(1)

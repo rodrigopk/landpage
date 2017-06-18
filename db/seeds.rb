@@ -134,7 +134,7 @@ Developer.first.interests.create([
 
 Developer.first.educations.create([
   {
-    institution: "Institution Federal de Educação, Ciência e Tecnologia do Ceará - IFCE",
+    institution: "Instituto Federal de Educação, Ciência e Tecnologia do Ceará - IFCE",
     institution_url:"http://ifce.edu.br/",
     start_date: Date.new(2012,1,10),
     end_date: Date.new(2016,12,20),

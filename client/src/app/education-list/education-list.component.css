@@ -1,0 +1,29 @@
+.edu-list {
+  margin-top: 50px;
+}
+
+.edu-list ul {
+  list-style-type: none;
+}
+
+.edu-item {  
+  width: 100%;
+  height: 200px;
+  margin: auto;  
+}
+
+.edu-title {
+  color: #EEB631;
+  width: 75%;
+  height: 100%;
+  float: left;
+}
+
+.edu-title p {
+  color: #222222;
+}
+
+.edu.description {
+  margin-left: 75%;
+  height: 100%;
+}

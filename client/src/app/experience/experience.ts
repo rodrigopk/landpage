@@ -1,12 +1,6 @@
-module String {
-    export function pluralize(count :number, word: string): string {
-      return (count == 1 ? word : word+'s') 
-    }
-}
+import {Periodical} from '../periodical'
 
-export class Experience {
-
-  public periodString: string = "";
+export class Experience extends Periodical{
 
   constructor(
     public id: number,
@@ -19,13 +13,7 @@ export class Experience {
     public company_url: string,
     public date_ended?: string
   ) {
-      if (period.years > 0){
-          this.periodString += period.years + " " + String.pluralize(period.years, "year");
-      }
-      if (period.months > 0){
-          this.periodString += " " + period.months + " " + String.pluralize(period.months, "month");          
-      }
-
+      super(period);
   }
 
 
