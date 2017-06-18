@@ -1,4 +1,4 @@
-import {Periodical} from '../periodical'
+import { Periodical } from '../periodical'
 
 export class Education extends Periodical {
 
@@ -38,14 +38,3 @@ export class Education extends Periodical {
   }
 
 }
-
-
-/*
-    institution: "Institution Federal de Educação, Ciência e Tecnologia do Ceará - IFCE",
-    institution_url:"http://ifce.edu.br/",
-    start_date: Date.new(2012,1,10),
-    end_date: Date.new(2016,12,20),
-    title: "Engineer’s Degree",
-    field: "Computer Engineering",
-    graduated: true
-*/

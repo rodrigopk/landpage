@@ -9,6 +9,7 @@ import { Experience } from '../experience/experience';
 import { Skill } from '../skill/skill';
 import { Interest } from '../interest/interest';
 import { Education } from '../education/education';
+import { Contact } from '../contact/contact';
 
 
 
@@ -33,7 +34,8 @@ export class DeveloperService {
                                                 Experience.arrayFromJson(res.json().experiences),
                                                 Skill.arrayFromJson(res.json().skills),
                                                 Interest.arrayFromJson(res.json().interests),
-                                                Education.arrayFromJson(res.json().educations)
+                                                Education.arrayFromJson(res.json().educations),
+                                                Contact.fromJson(res.json().contact)
                                             )                                           
                                     )
                                     .publishReplay(1)

@@ -2,6 +2,7 @@ import { Experience } from '../experience/experience';
 import { Skill } from '../skill/skill';
 import { Interest } from '../interest/interest';
 import { Education } from '../education/education';
+import { Contact } from '../contact/contact';
  
 export class Developer {
   constructor(
@@ -14,10 +15,11 @@ export class Developer {
     public experiences: Experience[],
     public skills: Skill[],
     public interests: Interest[],
-    public educations: Education[]
+    public educations: Education[],
+    public contact: Contact
    ) {}
 
   public static builder(){
-    return new Developer('','','',0,'','',[],[],[],[]);
+    return new Developer('','','',0,'','',[],[],[],[],null);
   }
 }
