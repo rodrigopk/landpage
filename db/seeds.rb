@@ -100,7 +100,7 @@ Developer.first.interests.create([
   },
   {
     title: "Literature",
-    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497723639/seed_data/literature.png")
+    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497792272/seed_data/literature.png")
   },
   {
     title: "Video Games",
@@ -112,7 +112,7 @@ Developer.first.interests.create([
   },
   {
     title: "Self Development",
-    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497723783/seed_data/self-improvement.png")
+    image: URI.parse("http://res.cloudinary.com/rodrigopk/image/upload/v1497792296/seed_data/self-improvement.png")
   },
   {
     title: "Martial Arts",
