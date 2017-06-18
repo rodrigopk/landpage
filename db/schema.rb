@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170617193928) do
+ActiveRecord::Schema.define(version: 20170618122143) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contacts", force: :cascade do |t|
+    t.string   "phone",        null: false
+    t.string   "email",        null: false
+    t.string   "skype_id",     null: false
+    t.string   "linkedin_url"
+    t.string   "github_url"
+    t.string   "twitter"
+    t.integer  "developer_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["developer_id"], name: "index_contacts_on_developer_id", using: :btree
+  end
 
   create_table "developers", force: :cascade do |t|
     t.string   "name",                 null: false
@@ -83,6 +96,7 @@ ActiveRecord::Schema.define(version: 20170617193928) do
     t.index ["developer_id"], name: "index_skills_on_developer_id", using: :btree
   end
 
+  add_foreign_key "contacts", "developers"
   add_foreign_key "educations", "developers"
   add_foreign_key "experiences", "developers"
   add_foreign_key "interests", "developers"
