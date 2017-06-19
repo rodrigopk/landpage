@@ -12,7 +12,7 @@ import { DeveloperService } from '../developer/developer.service';
 })
 export class ContactCardComponent implements OnInit {
 
-  contact :Contact = null;
+  contact :Contact = Contact.builder();
 
   constructor(private devService: DeveloperService) { }
 

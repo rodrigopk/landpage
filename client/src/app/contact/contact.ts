@@ -1,5 +1,7 @@
 export class Contact {
 
+  public formattedPhone: string;
+
   constructor(
     public id: number,
     public phone: string,
@@ -18,6 +20,10 @@ export class Contact {
               json.github_url,
               json.twitter
             );
+  }
+
+  public static builder(){
+    return new Contact(0,'','','','','');
   }
 
 }

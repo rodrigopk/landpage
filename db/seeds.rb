@@ -144,13 +144,13 @@ Developer.first.educations.create([
   }
 ]);
 
-Developer.first.contacts.create([
-  {
-    phone: "5585996515415",
-    email: "rodrigopk@gmail.com",
-    skype_id: "rodrigopk_",
-    linkedin_url: "https://www.linkedin.com/in/rodrigo-vasconcelos-de-barros-230653b3/",
-    github_url: "https://github.com/rodrigopk",
-    twitter: "@_rodrigopk"
-  }
-])
+Contact.create(
+  phone: "5585996515415",
+  email: "rodrigopk@gmail.com",
+  skype_id: "rodrigopk_",
+  linkedin_url: "https://www.linkedin.com/in/rodrigo-vasconcelos-de-barros-230653b3/",
+  github_url: "https://github.com/rodrigopk",
+  twitter: "@_rodrigopk"
+);
+
+Developer.first.contact = Contact.first;
