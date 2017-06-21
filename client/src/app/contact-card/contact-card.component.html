@@ -1,6 +1,10 @@
-<h1>Find me</h1>
-<p>{{ contact.phone }}</p>
-<p>{{ contact.email }}</p>
-<p><a href="{{ contact.linkedin_url }}">linkedin</a></p>
-<p><a href="{{ contact.github_url }}">github</a></p>
-<p>{{ contact.twitter }}</p>
+<h1>Contact me</h1>
+<div class="contact-box">
+  <p>{{ contact.email }}</p>
+  <p>{{ contact.phone | phone }}</p>
+  <div class="social">
+    <a href="{{ contact.linkedin_url }}"><img src="http://res.cloudinary.com/rodrigopk/image/upload/v1498082137/seed_data/linkedin.png"></a>
+    <a href="{{ contact.github_url }}"><img src="http://res.cloudinary.com/rodrigopk/image/upload/v1498082137/seed_data/github.png"></a>
+    <a href="{{ contact.twitter }}"><img src="http://res.cloudinary.com/rodrigopk/image/upload/v1498082137/seed_data/twitter-icon.png"></a>
+  </div>
+</div>

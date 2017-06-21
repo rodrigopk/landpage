@@ -4,6 +4,7 @@ import { Contact } from '../contact/contact';
 import { Developer } from '../developer/developer';
 import { DeveloperService } from '../developer/developer.service';
 
+
 @Component({
   selector: 'contact-card',
   templateUrl: './contact-card.component.html',

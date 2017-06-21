@@ -9,7 +9,9 @@ export class Contact {
     public linkedin_url: string,
     public github_url: string,
     public twitter: string
-  ) { }
+  ) { 
+    
+  }
 
   public static fromJson(json){
     return new Contact(
@@ -25,5 +27,7 @@ export class Contact {
   public static builder(){
     return new Contact(0,'','','','','');
   }
+
+
 
 }

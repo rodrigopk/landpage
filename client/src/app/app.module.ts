@@ -10,6 +10,7 @@ import { SkillListComponent } from './skill-list/skill-list.component';
 import { InterestListComponent } from './interest-list/interest-list.component';
 import { EducationListComponent } from './education-list/education-list.component';
 import { ContactCardComponent } from './contact-card/contact-card.component';
+import { PhonePipe } from './phone.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactCardComponent } from './contact-card/contact-card.component';
     SkillListComponent,
     InterestListComponent,
     EducationListComponent,
-    ContactCardComponent
+    ContactCardComponent,
+    PhonePipe
   ],
   imports: [
     BrowserModule,
