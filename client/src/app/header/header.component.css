@@ -1,0 +1,21 @@
+nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.navbar-collapse {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.navbar-toggleable-md .navbar-nav .nav-link {
+  width: 110px;
+  text-align: center;
+  cursor: pointer;
+}
