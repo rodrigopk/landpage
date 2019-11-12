@@ -26,7 +26,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors'
 
 gem 'active_model_serializers', '~> 0.10.0'
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.2.0"
 gem 'paperclip-cloudinary'
 
 group :development, :test do
