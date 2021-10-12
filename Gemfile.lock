@@ -93,7 +93,9 @@ GEM
     mime-types (3.3)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.1009)
-    mimemagic (0.3.3)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_portile2 (2.4.0)
     minitest (5.13.0)
     netrc (0.11.0)
@@ -112,7 +114,8 @@ GEM
       cloudinary (~> 1.1)
     pg (0.20.0)
     pg (0.20.0-x86-mingw32)
-    puma (3.8.2)
+    puma (4.3.9)
+      nio4r (~> 2.0)
     rack (2.0.7)
     rack-cors (0.4.1)
     rack-test (0.6.3)
@@ -213,7 +216,7 @@ DEPENDENCIES
   paperclip (~> 5.2.0)
   paperclip-cloudinary
   pg (~> 0.18)
-  puma (~> 3.0)
+  puma (~> 4.3)
   rack-cors
   rails (~> 5.0.2)
   rails-controller-testing
